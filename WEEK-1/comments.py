@@ -1,21 +1,18 @@
-# this is a comment, because any text preceded by a hash is a comment in Python
-# what is the use of comment: to make our code readable and maintainable
+# This is a single-line comment. Any text preceded by a hash symbol (#) is a comment in Python.
+# Purpose of comments: To make code more readable and maintainable.
 
-# print is a builtin function that takes several inputs and dispay the input
+# The `print` function is a built-in function that outputs its arguments to the console.
 print('Hello', 2024, 'Python', 9.8, 3.14, 100)
 
-''' 
-Thi is a multiline comment that allows us to write 
-several lines of comment in our pyhton
-code
+'''
+This is a multi-line comment (or docstring) that allows us to write 
+several lines of comments in our Python code. 
 
+It can be used for longer explanations or documentation.
 '''
 
-
 """
+This is another style of multi-line comment.
 
-This is again a multiline comment
-
-
-
+Both styles of multi-line comments are used for writing longer explanations or documentation.
 """

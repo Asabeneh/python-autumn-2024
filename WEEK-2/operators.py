@@ -1,81 +1,84 @@
 """
-Operators:
-- assignment operator (=)
-- Arithmetics: +, -, *, /, %, //, **
-- Comparison operators: >, >=, <, <=, ==, !=
-- Logical operators: or, and, not
+Python Operators:
 
+- Assignment Operator: (=)
+- Arithmetic Operators: +, -, *, /, %, //, **
+- Comparison Operators: >, >=, <, <=, ==, !=
+- Logical Operators: or, and, not
+- Membership Operators: in, not in
 """
 
-# Assignment operator(=)
-a = 3 
+# Assignment operator (=)
+a = 3
 mass = 75
-gravity = 9.8 
+gravity = 9.8
 
-# Arithmetics: +, -, *, /, %, //, **
-a = 3 
-b = 4 
+# Arithmetic Operators: +, -, *, /, %, //, **
+a = 3
+b = 4
 
-print(a + b)
-print(a - b)
-print(a * b)
-print(a / b)
-print(a % b)
-print(a ** b)
-print(a // b)
+print("Arithmetic Operations:")
+print(f"{a} + {b} =", a + b)   # Output: 3 + 4 = 7
+print(f"{a} - {b} =", a - b)   # Output: 3 - 4 = -1
+print(f"{a} * {b} =", a * b)   # Output: 3 * 4 = 12
+print(f"{a} / {b} =", a / b)   # Output: 3 / 4 = 0.75
+print(f"{a} % {b} =", a % b)   # Output: 3 % 4 = 3
+print(f"{a} ** {b} =", a ** b) # Output: 3 ** 4 = 81
+print(f"{a} // {b} =", a // b) # Output: 3 // 4 = 0
+print()  # Blank line for readability
 
-# - Comparison operators: >, >=, <, <=, ==, !=
+# Comparison Operators: >, >=, <, <=, ==, !=
+print("Comparison Operations:")
+print(f"4 > 3:", 4 > 3)     # Output: 4 > 3: True
+print(f"4 >= 3:", 4 >= 3)   # Output: 4 >= 3: True
+print(f"4 < 3:", 4 < 3)     # Output: 4 < 3: False
+print(f"3 < 4:", 3 < 4)     # Output: 3 < 4: True
+print(f"3 <= 4:", 3 <= 4)   # Output: 3 <= 4: True
 
-print(4 > 3)
-print(4 >= 3)
+print(f"4 == 3:", 4 == 3)   # Output: 4 == 3: False
+print(f"4 == 4:", 4 == 4)   # Output: 4 == 4: True
+print(f"4 == '4':", 4 == '4')   # Output: 4 == '4': False
+print(f"4 == int('4'):", 4 == int('4')) # Output: 4 == int('4'): True
+print(f"4 == 2 ** 2:", 4 == 2 ** 2)     # Output: 4 == 2 ** 2: True
 
-print(4 < 3)
-print(3 < 4)
-print(3 <= 4)
+print(f"4 != 3:", 4 != 3)   # Output: 4 != 3: True
+print(f"4 != 4:", 4 != 4)   # Output: 4 != 4: False
+print(f"4 != '4':", 4 != '4')   # Output: 4 != '4': True
 
+# Identity Operators: is, is not
+print(f"4 is 4:", 4 is 4)   # Output: 4 is 4: True
+print(f"2 is not 4:", 2 is not 4)   # Output: 2 is not 4: True
+print(f"2 is 4:", 2 is 4)   # Output: 2 is 4: False
+print()  # Blank line for readability
 
-print(4 == 3)
-print(4 == 4)
-print(4 == '4')
-print(4 == int('4'))
-print(4 == 2 ** 2)
+# Membership Operators: in, not in
+print("Membership Operations:")
+print("'Py' in 'Python':", 'Py' in 'Python')   # Output: 'Py' in 'Python': True
+print("'land' in 'Finland':", 'land' in 'Finland') # Output: 'land' in 'Finland': True
+print("'a' in ['a', 'e', 'i', 'o', 'u']:", 'a' in ['a', 'e', 'i', 'o', 'u']) # Output: 'a' in ['a', 'e', 'i', 'o', 'u']: True
+print()  # Blank line for readability
 
-print(4 != 3)
-print(4 != 4)
-print(4 != '4')
-print(4 is 4)
-print(2 is not 4)
-print(2 is 4 )
+# Logical Operators: and, or, not
+print("Logical Operations (and):")
+print('Both sides are true:', 4 > 3 and 3 < 4)  # Output: Both sides are true: True
+print('When one side is false:', 4 > 3 and 3 == 4)  # Output: When one side is false: False
+print('Both sides are false:', 4 < 3 and 3 > 4)  # Output: Both sides are false: False
 
-# Membership
-print('Py' in 'Python')
-print('Does land exist in FInland', 'land' in 'Finland')
-print('check if a is a vlue', 'a' in ['a','e','i','o','u'])
+print("\nLogical Operations (or):")
+print('Both sides are true:', 4 > 3 or 3 < 4)  # Output: Both sides are true: True
+print('When one side is true:', 4 > 3 or 3 == 4)  # Output: When one side is true: True
+print('Both sides are false:', 4 < 3 or 3 == 4)  # Output: Both sides are false: False
 
-print('Both sides are true:', 4 > 3 and 3 < 4)
-print('When one side is true:', 4 > 3 and 3 == 4)
-print('Both sides are false:', 4 < 3 and 3 > 4)
+print("\nLogical Operations (not):")
+print('Original True:', True)   # Output: Original True: True
+print('Negation of True:', not True)   # Output: Negation of True: False
+print('Double Negation of True:', not not True)  # Output: Double Negation of True: True
+print('Negation with logical expression:', not (4 < 3 or 3 == 4)) # Output: Negation with logical expression: True
+print()  # Blank line for readability
 
-print('Both sides are true:', 4 > 3 or 3 < 4)
-print('When one sides is true:', 4 > 3 or 3 == 4)
-print('Both one sides is false:', 4 < 3 or 3 == 4)
+# More Examples
+age = 19  # Assigning a new value
+height = 1.72  # height in meters
+complex_num = 5j  # Complex number
 
-print('NEGATION')
-print(True)
-print(not True)
-print(not not True)
-print('Both one sides are false:', 4 < 3 or 3 == 4)
-print('Both one sides are false:', not (4 < 3 or 3 == 4) )
-print('Both one sides are false:', 4 < 3 or not 3 == 4 )
-
-
-age = 250
-age = 19
-height = 1.72 
-complex_num = 5j
-print(type(complex_num))
-
-
-
-
-
+print(f"Data type of complex_num ({complex_num}):", type(complex_num)) # Output: Data type of complex_num (5j): <class 'complex'>

@@ -1,101 +1,77 @@
-# What are Python data types: Numbers(int, float, complex), Booleans, strings, list, tuples, dictionary
+# Python Data Types: Numbers (int, float, complex), Booleans, Strings, Lists, Tuples, Sets, Dictionaries
 
 # Numbers
-
-print(type(10))
-print(type('10'))
-print(type(9.81))
-print(type(1 + 2j))
-
+print("Numbers:")
+print(type(10))  # int
+print(type('10'))  # str
+print(type(9.81))  # float
+print(type(1 + 2j))  # complex
 
 # Booleans: True or False
+print("\nBooleans:")
+print(type(True))  # bool
+print(type(False))  # bool
+print(type(0 < 1))  # bool
+print(len('cat') == len('car'))  # False
+print('cat' == 'cat')  # True
 
-print(type(True))
-print(type(False))
-print(type(0 < 1))
-print(len('cat') == len('car'))
-print('cat' == 'cat')
+# Strings: A sequence of characters enclosed in single, double, or triple quotes
+print("\nStrings:")
+print('a')  # Single character string
+print('I love Python programming')  # String sentence
+print('I love Python programming'.lower())  # Convert to lowercase
+print('I love Python programming'.upper())  # Convert to uppercase
+print('I love Python programming'.title())  # Title case
+print('I love Python programming'.swapcase())  # Swap case
+print('I love Python programming'.split())  # Split into a list of words
+print('I love Python programming'.startswith('I love'))  # Check if it starts with 'I love'
+print('I love Python programming'.endswith('ing'))  # Check if it ends with 'ing'
 
+# Explore string methods
+print(dir('example_string'))  # Show available string methods
 
-# Strings: a text under single, double, triple quote. It could a single character or several pages.
+# Lists: A collection of ordered and mutable elements
+print("\nLists:")
+print([1, 2, 3, 4, 5])  # List of numbers
+print(['potatoes', 'tomatoes', 'milk', 'coffee', 'honey'])  # List of strings
+print(len(['potatoes', 'tomatoes', 'milk', 'coffee', 'honey']))  # List length
+print(['potatoes', 'tomatoes', 'milk', 'coffee', 'honey'][0])  # Accessing the first item
 
-print('a')
-print('I love python programming')
-print('I love python programming'.lower())
-print('I love python programming'.upper())
-print('I love python programming'.title())
-print(print('I love python programming'.swapcase()))
-print('I love python programming'.split())
-print('I love python programming'.startswith('I love'))
-print('I love python programming'.endswith('ing'))
+# Tuples: Ordered, indexed, and immutable collections
+print("\nTuples:")
+print((1, 2, 3, 4, 5))  # Tuple of numbers
+print(len((1, 2, 3, 4, 5)))  # Tuple length
+print(type((1, 2, 3, 4, 5)))  # Type check
+print((1, 2, 3, 4, 5)[0])  # Accessing the first item
 
-print(dir('kdkdkdkdkdkdkdkd'))
+# Sets: An unordered collection of unique items (no duplicates allowed)
+print("\nSets:")
+print({1, 2, 3, 7, 8, 4, 5})  # Set of numbers
+print(len({1, 2, 3, 3, 3, 4, 5}))  # Set length (duplicates removed)
+countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Finland', 'Sweden', 'Finland']
+print(len(countries))  # Length of original list
+print(list(set(countries)))  # Convert to set to remove duplicates and back to list
 
-print(dir(10))
+# Dictionaries: A collection of key-value pairs
+print("\nDictionaries:")
+translations = {
+    'auto': 'car',
+    'talo': 'house',
+    'tuoli': 'chair',
+    'tietokone': 'computer'
+}
+print(translations)  # Dictionary of translations
 
-## List: is a collection of data types are ordered and indexed, can be mutated
-
-print( [1, 2, 3, 4, 5])
-print(['potatos','tomatos', 'milk','coffee','honey'])
-print(len(['potatoes','tomatos', 'milk','coffee','honey']))
-print(['potatoes','tomatos', 'milk','coffee','honey'][0])
-
-
-# tuple: indexed, ordered,immutable
-print((1, 2, 3, 4, 5))
-print(len((1, 2, 3, 4, 5)))
-print(type((1, 2, 3, 4, 5)))
-print((1, 2, 3, 4, 5)[0])
-
-
-# Set: set is a collection of item, no order and no index, duplicate is not allowed
-print({1, 2, 3, 7, 8, 4, 5})
-print(len({1, 2, 3, 3, 3, 4, 5}))
-
-print(len(['Finland','Sweden','Norway','Denmark', 'Finland','Sweden','Finland']))
-
-print(list(set(['Finland','Sweden','Norway','Denmark', 'Finland','Sweden','Finland'])))
-
-
-# Dictionary: key value pair
-
-
-print({
-    'auto':'car',
-    'talo':'house',
-    'tuoli':'chair',
-    'tietokone':'computer'
-})
-
-print({
-    'first_name':'Asab',
-    'last_name':'Yeta',
-    'country':'Finland',
-    'city':'Helsinki',
-    'age':250,
-    'is_married':True,
-    'skills':['JavaScript','Python','SQL']
-})
-print(len({
-    'first_name':'Asab',
-    'last_name':'Yeta',
-    'country':'Finland',
-    'city':'Helsinki',
-    'age':250,
-    'is_married':True,
-    'skills':['JavaScript','Python','SQL']
-}))
-print(type({
-    'first_name':'Asab',
-    'last_name':'Yeta',
-    'country':'Finland',
-    'city':'Helsinki',
-    'age':250,
-    'is_married':True,
-    'skills':['JavaScript','Python','SQL']
-}))
-
-
-
-
+person = {
+    'first_name': 'Asab',
+    'last_name': 'Yeta',
+    'country': 'Finland',
+    'city': 'Helsinki',
+    'age': 250,
+    'is_married': True,
+    'skills': ['JavaScript', 'Python', 'SQL']
+}
+print(person)  # Person dictionary
+print(len(person))  # Dictionary length
+print(type(person))  # Type check
 
