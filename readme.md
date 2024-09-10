@@ -1,6 +1,6 @@
 # Python Programming
 
-# Python Code Examples and Notes
+## **Python Code Examples and Notes**
 
 This document provides an overview of various Python code examples, including explanations and expected outputs for each code snippet.
 
