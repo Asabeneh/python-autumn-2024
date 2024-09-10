@@ -360,7 +360,6 @@ print(type(person))  # Type check
 ```
 
 ## Operators
-# Python Operators Overview
 
  Python operators, including assignment, arithmetic, comparison, logical, membership, and identity operators. Examples are provided for each type of operator along with their expected outputs.
 
