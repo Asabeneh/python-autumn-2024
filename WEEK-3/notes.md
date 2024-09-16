@@ -1,0 +1,4 @@
+- Conditionals
+- Strings
+- List
+- Loops
