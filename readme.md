@@ -1,457 +1,379 @@
 # Python Programming
 
-## **Python Code Examples and Notes**
+- [Python Programming](#python-programming)
+  - [Introduction to Python Programming](#introduction-to-python-programming)
+    - [Installing Python](#installing-python)
+    - [Interactive Python Shell](#interactive-python-shell)
+    - [Installing Visual Studio Code](#installing-visual-studio-code)
+    - [Setting Up Python in Visual Studio Code](#setting-up-python-in-visual-studio-code)
+    - [Writing Your First Python Program in VS Code](#writing-your-first-python-program-in-vs-code)
+    - [Python Comments](#python-comments)
+      - [Single-Line Comments](#single-line-comments)
+      - [Multiline Comments (Docstrings)](#multiline-comments-docstrings)
+    - [Summary](#summary)
+  - [Python Built-in Functions](#python-built-in-functions)
+    - [The `print()` Function](#the-print-function)
+    - [The `len()` Function](#the-len-function)
+    - [The `type()` Function](#the-type-function)
+    - [The `input()` Function](#the-input-function)
+    - [The `range()` Function](#the-range-function)
+    - [Built-in Functions](#built-in-functions)
+    - [The `abs()`, `min()`, `max()`, and `sum()` Functions](#the-abs-min-max-and-sum-functions)
+    - [The `enumerate()` Function](#the-enumerate-function)
+    - [The `dir()` Function](#the-dir-function)
+    - [Builtin Functions Summary](#builtin-functions-summary)
 
-This document provides an overview of various Python code examples, including explanations and expected outputs for each code snippet.
+[WEEK 2 >>](./WEEK-2/week-2.md)
 
-## 1. Basic Arithmetic Operations
+## Introduction to Python Programming
+
+Python is a versatile and beginner-friendly programming language known for its simplicity and readability. It's widely used in various fields, such as web development, data science, automation, and artificial intelligence. This guide will walk you through setting up Python, running an interactive shell, installing Visual Studio Code (VS Code), and writing your first Python program: `"Hello World!"`.
+
+### Installing Python
+
+Before writing any Python code, you need to install Python on your computer. Follow these steps:
+
+- **Step 1:** Go to the [official Python website](https://www.python.org/).
+- **Step 2:** Click on the **Downloads** section and choose the version for your operating system (Windows, macOS, or Linux).
+- **Step 3:** Run the downloaded installer.
+  - For Windows users, during installation, make sure to check the box labeled **"Add Python to PATH"**. This makes running Python from the command line easier.
+- **Step 4:** Verify the installation by opening a terminal (Command Prompt for Windows, or Terminal for macOS/Linux) and typing:
+
+  ```bash
+  python --version
+  ```
+
+  You should see the installed Python version printed.
+
+### Interactive Python Shell
+
+Python comes with an interactive shell that allows you to run Python commands immediately. Here's how to open it:
+
+- **Step 1:** Open your terminal or command prompt.
+- **Step 2:** Type `python` (or `python3` on some systems) and hit **Enter**. This will start the Python shell.
+  
+You’ll see a prompt like this:
 
 ```python
-# Arithmetic operations: addition, subtraction, multiplication, division, modulus, floor division, exponentiation
-
-# Addition
-print('The sum of 3 and 4 is:', 3 + 4)
-# Output: The sum of 3 and 4 is: 7
-
-# Subtraction
-print('The difference between 4 and 3 is:', 4 - 3)
-# Output: The difference between 4 and 3 is: 1
-
-# Multiplication
-print('The product of 3 and 4 is:', 3 * 4)
-# Output: The product of 3 and 4 is: 12
-
-# Division (float)
-print('The division of 4 by 3 is:', 4 / 3)
-# Output: The division of 4 by 3 is: 1.3333333333333333
-
-# Modulus (remainder)
-print('The remainder when 4 is divided by 3 is:', 4 % 3)
-# Output: The remainder when 4 is divided by 3 is: 1
-
-# Exponentiation (power)
-print('3 raised to the power of 4 is:', 3 ** 4)
-# Output: 3 raised to the power of 4 is: 81
-
-# Floor Division (integer division)
-print('The floor division of 4 by 3 is:', 4 // 3)
-# Output: The floor division of 4 by 3 is: 1
+Python 3.x.x (default, Mar 18 2021, 13:41:09)
+[GCC 7.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
 ```
 
-##  Comments and Documentation
+This is the Python interactive shell, where you can run Python commands directly. Try typing:
 
-```py
-# This is a single-line comment. Any text preceded by a hash symbol (#) is a comment in Python.
-# Purpose of comments: To make code more readable and maintainable.
+```python
+print('Hello World!')
+```
 
-# The `print` function is a built-in function that outputs its arguments to the console.
-print('Hello', 2024, 'Python', 9.8, 3.14, 100)
-# Output: Hello 2024 Python 9.8 3.14 100
+It should print:
 
+```python
+Hello World!
+```
+
+You’ve just written your first Python program in the interactive shell!
+
+### Installing Visual Studio Code
+
+To write more complex Python programs, you’ll want to use a code editor like Visual Studio Code (VS Code). Follow these steps to install and set up VS Code:
+
+- **Step 1:** Go to the [Visual Studio Code website](https://code.visualstudio.com/).
+- **Step 2:** Download the appropriate version for your operating system (Windows, macOS, or Linux).
+- **Step 3:** Run the installer and follow the setup instructions.
+- **Step 4:** Once installed, open VS Code.
+
+### Setting Up Python in Visual Studio Code
+
+Now, let's set up Python in VS Code.
+
+- **Step 1:** Install the Python extension for VS Code:
+  - Open VS Code and click on the **Extensions** icon (on the left-hand toolbar).
+  - Search for "Python" and install the official Python extension by Microsoft.
+
+- **Step 2:** Ensure VS Code is using the correct Python interpreter:
+  - Press `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS) to open the Command Palette.
+  - Type `Python: Select Interpreter` and choose the Python version you installed.
+
+### Writing Your First Python Program in VS Code
+
+Let’s write the same `"Hello World!"` program in VS Code.
+
+- **Step 1:** Create a new file in VS Code by selecting **File > New File**.
+- **Step 2:** Save the file with a `.py` extension (e.g., `hello.py`).
+- **Step 3:** Write the following code in the file:
+
+  ```python
+  print('Hello World!')
+  ```
+
+- **Step 4:** Run the Python code:
+  - You can run it directly within VS Code by pressing `Ctrl+F5` (Windows) or `Cmd+F5` (macOS).
+  - Alternatively, open the terminal within VS Code (`Ctrl+` `) and type:
+
+      ```bash
+      python hello.py
+      ```
+
+You should see the output:
+
+```bash
+Hello World!
+```
+
+Congratulations! You've successfully set up Python, learned how to use the interactive shell, installed VS Code, and written your first Python program. This is just the beginning of your Python journey!
+
+---
+
+### Python Comments
+
+In Python, comments are an essential part of writing clean and understandable code. Comments help both the programmer and others understand what the code is doing. Python supports two types of comments: **single-line comments** and **multiline comments**. In this section, we will explain these comment types and the `print()` function.
+
+#### Single-Line Comments
+
+A **single-line comment** in Python begins with a hash symbol (`#`). Everything following the hash on that line is considered a comment and is ignored by the Python interpreter.
+
+**Single Line Comment Example:**
+
+```python
+# A hash symbol is a single line comment
+# The purpose of a comment is to make our code readable and maintainable
+```
+
+In this example, both lines are comments and will not be executed. They exist to describe the purpose of the code that follows, helping the programmer understand what’s happening.
+
+```python
+# The `print()` function is used to display output on the screen. It can take one or more arguments and print them, separated by spaces.
+print('Hello', 'World', 2024, 'Data Analysis with Python - Autumn 2024')
+```
+
+**Explanation:**
+
+- This line of code prints four separate items: `'Hello'`, `'World'`, `2024`, and `'Data Analysis with Python - Autumn 2024'`.
+- The `print()` function separates each of these inputs by a space and displays them in a single line:
+  
+```sh
+  Hello World 2024 Data Analysis with Python - Autumn 2024
+```
+
+You can pass any combination of data types (strings, integers, etc.) to `print()`, and it will display them on the console.
+
+#### Multiline Comments (Docstrings)
+
+In Python, you can create **multiline comments** by enclosing the comment text within triple quotes (`'''` or `"""`). These are often used for longer explanations or documentation. Multiline comments are sometimes referred to as **docstrings**, especially when used inside functions or classes to document their purpose.
+
+**Multiline Comment Example**:
+
+```python
 '''
-This is a multi-line comment (or docstring) that allows us to write 
-several lines of comments in our Python code. 
-
-It can be used for longer explanations or documentation.
+A multiline comment allows us to write a comment
+on several lines and
+sometimes it can be used as good documentation
 '''
-
-"""
-This is another style of multi-line comment.
-
-Both styles of multi-line comments are used for writing longer explanations or documentation.
-"""
 ```
 
-## Built-in Functions
-
-```py
-# Built-in functions in Python: print, len, input, type, int, float, min, max, sum, list, range, abs, round, dir
-# The `print` function displays the provided inputs.
-print('Asabeneh', 2024, True, False, [1, 2, 3, 4], 'We love Python', sep=', ')
-# Output: Asabeneh,2024,True,False,[1, 2, 3, 4],We love Python
-
-print('Asabeneh', 2024, True, False, [1, 2, 3, 4], 'We love Python', sep='\n')
-# Output:
-# Asabeneh
-# 2024
-# True
-# False
-# [1, 2, 3, 4]
-# We love Python
-
-# The `len` function returns the number of items in an object (e.g., string, list).
-print('Length of "cat":', len('cat'))
-# Output: Length of "cat": 3
-
-print('Length of list [1, 2, 3, 4, 5, 6]:', len([1, 2, 3, 4, 5, 6]))
-# Output: Length of list [1, 2, 3, 4, 5, 6]: 6
-
-print('Length of "I love cat":', len('I love cat'))
-# Output: Length of "I love cat": 11
-
-# The `type` function returns the type of an object.
-print('Type of float(\'9.81\'):', type(float('9.81')))
-# Output: Type of float('9.81'): <class 'float'>
-
-# The `min` function returns the smallest of the given arguments.
-print('Minimum value:', min(1, 2, 20, -10, 200, 0))
-# Output: Minimum value: -10
-
-# The `max` function returns the largest of the given arguments.
-print('Maximum value:', max(1, 2, 20, -10, 200, 0))
-# Output: Maximum value: 200
-
-# The `sum` function returns the sum of all items in an iterable.
-print('Sum of list [1, 2, 20, -10, 200, 0]:', sum([1, 2, 20, -10, 200, 0]))
-# Output: Sum of list [1, 2, 20, -10, 200, 0]: 213
-
-# The `list` function creates a list object.
-print('Empty list:', list())
-# Output: Empty list: []
-
-print('List from string "cat":', list('cat'))
-# Output: List from string "cat": ['c', 'a', 't']
-
-# The `range` function generates a sequence of numbers.
-print('Range from 0 to 10:', list(range(0, 10, 1)))
-# Output: Range from 0 to 10: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-print('Range from 0 to 100:', list(range(0, 101, 1)))
-# Output: Range from 0 to 100: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ..., 100]
-
-print('Range from 0 to 100 with step 2:', list(range(0, 101, 2)))
-# Output: Range from 0 to 100 with step 2: [0, 2, 4, 6, 8, ..., 100]
-
-print('Range from 1 to 100 with step 2:', list(range(1, 101, 2)))
-# Output: Range from 1 to 100 with step 2: [1, 3, 5, 7, 9, ..., 99]
-
-# The `round` function returns a number rounded to a specified number of decimal places.
-print('Round 3.14159 to 2 decimal places:', round(3.14159, 2))
-# Output: Round 3.14159 to 2 decimal places: 3.14
-
-print('Round 9.87654 to 1 decimal place:', round(9.87654, 1))
-# Output: Round 9.87654 to 1 decimal place: 9.9
-
-# The `abs` function returns the absolute value of a number.
-print('Absolute value of -5:', abs(-5))
-# Output: Absolute value of -5: 5
-```
-
-## Variables
-
-```py
-
-# Variables: Containers to store different data types
-a = 3 
-b = 4 
-c = a + b
-
-# Printing variables
-print('Value of a:', a)
-# Output: Value of a: 3
-
-print('Sum of a and b:', c)
-# Output: Sum of a and b: 7
-
-# Arithmetic operations with variables
-print('Sum of a and b is', a + b)
-# Output: Sum of a and b is 7
-
-print('Difference of a and b is', a - b)
-# Output: Difference of a and b is -1
-
-print('Product of a and b is', a * b)
-# Output: Product of a and b is 12
-
-print('Division of a and b is', a / b)
-# Output: Division of a and b is 0.75
-
-# Define more variables
-first_name = 'Asabeneh'
-last_name = 'Yetayeh'
-country = 'Finland'
-city = 'Helsinki'
-age = 250  # Note: age should not be a tuple, corrected here
-is_married = True 
-skills = ['HTML', 'CSS', 'JavaScript', 'Python']  # List
-# skills = ('HTML', 'CSS', 'JavaScript', 'Python')  # Tuple (commented out)
-# skills = {'HTML', 'CSS', 'JavaScript', 'Python'}  # Set (commented out)
-
-gravity = 9.81
-mass = 75
-
-weight = mass * gravity 
-print('Weight:', round(weight, 1))
-# Output: Weight: 735.8
-
-current_year = 2024
-```
-
-## Data types
-
-Python data types, including examples and expected outputs for each type. Understanding these data types is crucial for effective programming in Python.
-
-### 1. Numbers
-
-In Python, numbers come in several types:
+or
 
 ```python
-# Numbers
-print("Numbers:")
-print(type(10))  # int
-# Output: <class 'int'>
-
-print(type('10'))  # str
-# Output: <class 'str'>
-
-print(type(9.81))  # float
-# Output: <class 'float'>
-
-print(type(1 + 2j))  # complex
-# Output: <class 'complex'>
+"""
+A multiline comment allows us to write a comment
+on several lines and
+sometimes it can be used as good documentation
+"""
 ```
 
-### 2. Booleans
- Booleans: True or False
+**Explanation:**
 
-```py
-print("\nBooleans:")
-print(type(True))  # bool
-# Output: <class 'bool'>
+- Both single quotes (`'''`) and double quotes (`"""`) can be used to write multiline comments. The choice between them is a matter of preference and style.
+- These multiline comments are helpful for providing detailed explanations of code or for documenting larger sections.
 
-print(type(False))  # bool
-# Output: <class 'bool'>
+### Summary
 
-print(type(0 < 1))  # bool
-# Output: <class 'bool'>
+- **Single-line comments** (`#`) are useful for short, concise comments.
+- **Multiline comments** (`'''` or `"""`) are helpful for more extensive explanations or documentation.
+- The `print()` function is a fundamental tool for displaying outputs, allowing multiple arguments separated by spaces to be printed in a single line.
 
-print(len('cat') == len('car'))  # False
-# Output: False
+By using comments effectively, you can make your code more readable and maintainable, while the `print()` function provides an easy way to output text and other data types during the execution of your Python programs.
 
-print('cat' == 'cat')  # True
-# Output: True
-```
+---
 
+## Python Built-in Functions
 
-### 3. Strings
+In Python, functions are a key tool for writing reusable and modular code. There are two main types of functions in Python: **built-in functions** and **custom functions**.
 
- Strings: A sequence of characters enclosed in single, double, or triple quotes
-print("\nStrings:")
+- **Built-in Functions**: Predefined functions that are available in Python without the need to import any external modules.
+- **Custom Functions**: Functions defined by the user to solve specific problems or perform specific tasks.
 
-```py
-print('a')  # Single character string
-# Output: a
+This document focuses on various **built-in functions** in Python, including how to use them and what they do.
 
-print('I love Python programming')  # String sentence
-# Output: I love Python programming
+---
 
-print('I love Python programming'.lower())  # Convert to lowercase
-# Output: i love python programming
+###  The `print()` Function
 
-print('I love Python programming'.upper())  # Convert to uppercase
-# Output: I LOVE PYTHON PROGRAMMING
-
-print('I love Python programming'.title())  # Title case
-# Output: I Love Python Programming
-
-print('I love Python programming'.swapcase())  # Swap case
-# Output: i LOVE pYTHON PROGRAMMING
-
-print('I love Python programming'.split())  # Split into a list of words
-# Output: ['I', 'love', 'Python', 'programming']
-
-print('I love Python programming'.startswith('I love'))  # Check if it starts with 'I love'
-# Output: True
-
-print('I love Python programming'.endswith('ing'))  # Check if it ends with 'ing'
-# Output: True
-
-# Explore string methods
-print(dir('example_string'))  # Show available string methods
-# Output: List of string methods
-```
-
-### 4. Lists
-```py
-
-# Lists: A collection of ordered and mutable elements
-print("\nLists:")
-print([1, 2, 3, 4, 5])  # List of numbers
-# Output: [1, 2, 3, 4, 5]
-
-print(['potatoes', 'tomatoes', 'milk', 'coffee', 'honey'])  # List of strings
-# Output: ['potatoes', 'tomatoes', 'milk', 'coffee', 'honey']
-
-print(len(['potatoes', 'tomatoes', 'milk', 'coffee', 'honey']))  # List length
-# Output: 5
-
-print(['potatoes', 'tomatoes', 'milk', 'coffee', 'honey'][0])  # Accessing the first item
-# Output: potatoes
-
-```
-
-### 5. Tuples
-
-```py
-# Tuples: Ordered, indexed, and immutable collections
-print("\nTuples:")
-print((1, 2, 3, 4, 5))  # Tuple of numbers
-# Output: (1, 2, 3, 4, 5)
-
-print(len((1, 2, 3, 4, 5)))  # Tuple length
-# Output: 5
-
-print(type((1, 2, 3, 4, 5)))  # Type check
-# Output: <class 'tuple'>
-
-print((1, 2, 3, 4, 5)[0])  # Accessing the first item
-# Output: 1
-```
-
-### 6. Sets
-```py
-# Sets: An unordered collection of unique items (no duplicates allowed)
-print("\nSets:")
-print({1, 2, 3, 7, 8, 4, 5})  # Set of numbers
-# Output: {1, 2, 3, 4, 5, 7, 8}
-
-print(len({1, 2, 3, 3, 3, 4, 5}))  # Set length (duplicates removed)
-# Output: 5
-
-countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Finland', 'Sweden', 'Finland']
-print(len(countries))  # Length of original list
-# Output: 7
-
-print(list(set(countries)))  # Convert to set to remove duplicates and back to list
-# Output: ['Denmark', 'Norway', 'Sweden', 'Finland']
-```
-
-### 7. Dictionaries
-
-```py
-# Dictionaries: A collection of key-value pairs
-print("\nDictionaries:")
-fin_eng_dict = {
-    'auto': 'car',
-    'talo': 'house',
-    'tuoli': 'chair',
-    'tietokone': 'computer'
-}
-print(fin_eng_dict)  # Dictionary of fin_eng_dict
-# Output: {'auto': 'car', 'talo': 'house', 'tuoli': 'chair', 'tietokone': 'computer'}
-
-person = {
-    'first_name': 'Asab',
-    'last_name': 'Yeta',
-    'country': 'Finland',
-    'city': 'Helsinki',
-    'age': 250,
-    'is_married': True,
-    'skills': ['JavaScript', 'Python', 'SQL']
-}
-print(person)  # Person dictionary
-# Output: {'first_name': 'Asab', 'last_name': 'Yeta', 'country': 'Finland', 'city': 'Helsinki', 'age': 250, 'is_married': True, 'skills': ['JavaScript', 'Python', 'SQL']}
-
-print(len(person))  # Dictionary length
-# Output: 7
-
-print(type(person))  # Type check
-# Output: <class 'dict'>
-```
-
-## Operators
-
- Python operators, including assignment, arithmetic, comparison, logical, membership, and identity operators. Examples are provided for each type of operator along with their expected outputs.
-
-### 1. Assignment Operator
-
-The assignment operator `=` is used to assign values to variables.
+The `print()` function is one of the most commonly used built-in functions in Python. It displays the output of any data type (integers, strings, lists, etc.) on the screen.
 
 ```python
-# Assignment operator (=)
-a = 3
-mass = 75
-gravity = 9.8
+print(10, type(10))
+print(9.81, type(9.81))
+print('Asabeneh Yetayeh', 'Finland', 'Helsinki', 250, ['HTML', 'CSS', 'JS'], sep=', ')
 ```
 
-### 2. Arithmetic Operators
-```py
-# Arithmetic Operators: +, -, *, /, %, //, **
-a = 3
-b = 4
+**Explanation**:
 
-print("Arithmetic Operations:")
-print(f"{a} + {b} =", a + b)   # Output: 3 + 4 = 7
-print(f"{a} - {b} =", a - b)   # Output: 3 - 4 = -1
-print(f"{a} * {b} =", a * b)   # Output: 3 * 4 = 12
-print(f"{a} / {b} =", a / b)   # Output: 3 / 4 = 0.75
-print(f"{a} % {b} =", a % b)   # Output: 3 % 4 = 3
-print(f"{a} ** {b} =", a ** b) # Output: 3 ** 4 = 81
-print(f"{a} // {b} =", a // b) # Output: 3 // 4 = 0
-print()  # Blank line for readability
+- `print()` takes any number of arguments and prints them, separated by spaces by default. You can customize the separator using the `sep` parameter.
+- `type()` shows the type of the data passed to it, like integer, float, string, etc.
 
+Output:
+
+```sh
+10 <class 'int'>
+9.81 <class 'float'>
+Asabeneh Yetayeh, Finland, Helsinki, 250, ['HTML', 'CSS', 'JS']
 ```
 
-### 3. Comparison Operators
+---
 
-```py
-# Comparison Operators: >, >=, <, <=, ==, !=
-print("Comparison Operations:")
-print(f"4 > 3:", 4 > 3)     # Output: 4 > 3: True
-print(f"4 >= 3:", 4 >= 3)   # Output: 4 >= 3: True
-print(f"4 < 3:", 4 < 3)     # Output: 4 < 3: False
-print(f"3 < 4:", 3 < 4)     # Output: 3 < 4: True
-print(f"3 <= 4:", 3 <= 4)   # Output: 3 <= 4: True
+### The `len()` Function
 
-print(f"4 == 3:", 4 == 3)   # Output: 4 == 3: False
-print(f"4 == 4:", 4 == 4)   # Output: 4 == 4: True
-print(f"4 == '4':", 4 == '4')   # Output: 4 == '4': False
-print(f"4 == int('4'):", 4 == int('4')) # Output: 4 == int('4'): True
-print(f"4 == 2 ** 2:", 4 == 2 ** 2)     # Output: 4 == 2 ** 2: True
+The `len()` function returns the number of items in a sequence (like strings, lists, etc.).
 
-print(f"4 != 3:", 4 != 3)   # Output: 4 != 3: True
-print(f"4 != 4:", 4 != 4)   # Output: 4 != 4: False
-print(f"4 != '4':", 4 != '4')   # Output: 4 != '4': True
-
+```python
+print(len('cat'))
+print(len('Finland'))
 ```
 
-### 4. Identity Operators
-```py
-# Identity Operators: is, is not
-print(f"4 is 4:", 4 is 4)   # Output: 4 is 4: True
-print(f"2 is not 4:", 2 is not 4)   # Output: 2 is not 4: True
-print(f"2 is 4:", 2 is 4)   # Output: 2 is 4: False
-print()  # Blank line for readability
-```
-### 5. Membership Operators
+**Explanation**:
 
-```py
-# Membership Operators: in, not in
-print("Membership Operations:")
-print("'Py' in 'Python':", 'Py' in 'Python')   # Output: 'Py' in 'Python': True
-print("'land' in 'Finland':", 'land' in 'Finland') # Output: 'land' in 'Finland': True
-print("'a' in ['a', 'e', 'i', 'o', 'u']:", 'a' in ['a', 'e', 'i', 'o', 'u']) # Output: 'a' in ['a', 'e', 'i', 'o', 'u']: True
-print()  # Blank line for readability
+- `len()` works on any sequence type such as strings, lists, tuples, etc., and returns the length.
+
+Output:
+
+```sh
+3
+7
 ```
 
-### 6. Logical Operators
+---
 
-```py
-# Logical Operators: and, or, not
-print("Logical Operations (and):")
-print('Both sides are true:', 4 > 3 and 3 < 4)  # Output: Both sides are true: True
-print('When one side is false:', 4 > 3 and 3 == 4)  # Output: When one side is false: False
-print('Both sides are false:', 4 < 3 and 3 > 4)  # Output: Both sides are false: False
+### The `type()` Function
 
-print("\nLogical Operations (or):")
-print('Both sides are true:', 4 > 3 or 3 < 4)  # Output: Both sides are true: True
-print('When one side is true:', 4 > 3 or 3 == 4)  # Output: When one side is true: True
-print('Both sides are false:', 4 < 3 or 3 == 4)  # Output: Both sides are false: False
+The `type()` function returns the type of a given object.
 
-print("\nLogical Operations (not):")
-print('Original True:', True)   # Output: Original True: True
-print('Negation of True:', not True)   # Output: Negation of True: False
-print('Double Negation of True:', not not True)  # Output: Double Negation of True: True
-print('Negation with logical expression:', not (4 < 3 or 3 == 4)) # Output: Negation with logical expression: True
-print()  # Blank line for readability
+```python
+print(10, type(10))
+print(1 + 4j, type(1 + 4j))
 ```
+
+**Explanation**:
+
+- `type()` shows the data type of any object, whether it's an integer, float, complex number, string, etc.
+
+---
+
+### The `input()` Function
+
+The `input()` function is used to take input from the user.
+
+```python
+name = input('Enter your name: ')
+print('Hello, ' + name)
+```
+
+**Explanation**:
+
+- `input()` takes a string as a prompt and waits for the user to input text. The input is always returned as a string.
+
+---
+
+### The `range()` Function
+
+The `range()` function generates a sequence of numbers, which can be converted into a list or iterated through.
+
+```python
+print(list(range(0, 10)))
+print(list(range(0, 101, 2)))
+```
+
+**Explanation**:
+
+- `range(start, end, step)` generates a sequence of numbers from `start` to `end-1`, with a step increment of `step`.
+- You can convert a range object into a list using `list()`.
+
+---
+
+### Built-in Functions
+
+Python provides various built-in functions for working with data types like **lists**, **sets**, **dictionaries**, and **tuples**.
+
+```python
+print(set(['English', 'French', 'Finnish', 'Swedish', 'Finnish']))
+print(dict(name='Asab', age=250))
+```
+
+**Explanation**:
+
+- `set()` creates a set, removing duplicates.
+- `dict()` creates a dictionary with key-value pairs.
+
+---
+
+### The `abs()`, `min()`, `max()`, and `sum()` Functions
+
+These built-in functions perform basic mathematical operations.
+
+```python
+print(abs(-5))
+print(min(-2, 10, 5, 20))
+print(max(-2, 10, 5, 20))
+print(sum([1, 2, 3, 4, 5]))
+```
+
+**Explanation**:
+
+- `abs()` returns the absolute value.
+- `min()` and `max()` return the smallest and largest values, respectively.
+- `sum()` adds up all elements in a list.
+
+---
+
+### The `enumerate()` Function
+
+The `enumerate()` function adds a counter to an iterable (like a list) and returns it as an enumerate object.
+
+```python
+countries = ['Finland', 'Sweden', 'Norway']
+print(list(enumerate(countries)))
+```
+
+**Explanation**:
+
+- `enumerate()` is useful when you need to iterate over a list while keeping track of the index.
+
+---
+
+### The `dir()` Function
+
+The `dir()` function returns a list of all attributes and methods available for an object.
+
+```python
+print(dir('hello'))
+```
+
+**Explanation**:
+
+- `dir()` helps you explore the methods associated with a particular object, such as a string, list, or function.
+
+---
+
+### Builtin Functions Summary
+
+- Python's built-in functions like `print()`, `len()`, `input()`, and `range()` are powerful tools for solving common problems and tasks.
+- Functions like `abs()`, `min()`, `max()`, `sum()`, and `enumerate()` are useful for working with numbers and sequences.
+- Python's data types—lists, sets, dictionaries, and tuples—can be manipulated easily using functions like `list()`, `set()`, `dict()`, etc.
+
+Understanding and effectively using these built-in functions is a fundamental part of programming in Python
+
+---
+
+[WEEK 2 >>](./WEEK-2/week-2.md)
