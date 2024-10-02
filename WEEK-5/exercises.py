@@ -32,7 +32,7 @@ def xyz(lst):
         dct[letter] = new_lst
     return dct
 
-# pprint(xyz(countries))
+pprint(xyz(countries))
 
 # Modules 
 
