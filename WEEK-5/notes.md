@@ -1,5 +1,5 @@
 Week 6:
-
+# Module
 
 # Higher Order Functions
 
@@ -8,3 +8,5 @@ Week 6:
 # List comprehesion
 
 # Python Errors
+
+# File Handling

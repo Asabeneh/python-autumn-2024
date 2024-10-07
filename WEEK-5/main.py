@@ -1,6 +1,6 @@
 # import custom_modules 
-from custom_modules import sum_all_nums, add_two_nums, multiply_two_nums, is_even, linear_equation, filter_country_with_land as filter_country, filter_evens, filter_positive_evens
-from countries import countries
+from custom_modules import sum_all_nums, add_two_nums, multiply_two_nums, is_even, linear_equation, filter_country_with_land as filter_country, filter_evens
+from utils import utils
 """ 
 print(sum_all_nums(2, 3, 4, 5,6, -10))
 print(add_two_nums(2, 3))
@@ -51,5 +51,7 @@ print(generate_random_id())
 print(generate_random_id(7))
 print(generate_random_id(24))
 
+print(utils.alpha_numberic)
+print(utils.generate_hexa_color())
 
 

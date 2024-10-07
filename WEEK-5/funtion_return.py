@@ -99,3 +99,86 @@ def xyz (x, **kwargs):
     print(x, kwargs)
 
 xyz('xyz - ??', name ='Asab', age = 250, county = 'Finland', is_married = True, title = 'Developer')
+
+
+# Lambda functions
+
+square = lambda x : x ** 2
+print(square(3))
+print(square(10))
+
+change_name = lambda name: 'Mr. ' + name.upper()
+print(change_name('Asabeneh'))
+
+
+add_nums = lambda a, b, c, d: a + b + c + d
+print(add_nums(1, 2, 3, 4))
+
+'''
+a, b, c 
+ax + by + c = 0
+2x + 3y + 10 = 0
+'''
+liniear_equation = lambda x, y, c : 2 * x + 3 * y + c
+
+# Higher Order Function: When a function has another function as a parameter
+# Higher order Function: When a function return another function 
+
+def make_square(n):
+    return n * n
+
+""" def make_cube(n):
+    return n * n * n """
+    
+    
+def make_cube(m, fn):
+    return m * fn(m)
+
+print(make_cube(3, make_square))
+
+def do_something(n, m, fn):
+    return fn(n) + 3 * n  + m
+
+def do_math(n, m, operation):
+    def add_nums():
+            return n + m
+    def subtract():
+        return n - m 
+    def multiply():
+        return n * m 
+    def divide():
+        return n / m 
+    if operation == 'add':
+        return add_nums 
+    elif operation == 'subtract':
+        return subtract
+    elif operation == 'multiply':
+        return multiply
+    elif operation == 'divide':
+        return divide
+    else:
+        return add_nums
+
+
+print(do_math(3, 4,'multiply')())
+
+
+def do_math(n, m):
+    def add_nums():
+            return n + m
+    def subtract():
+        return n - m 
+    def multiply():
+        return n * m 
+    def divide():
+        return n / m 
+    return {
+        'add_nums':add_nums,
+        'multiply':multiply,
+        'subtract':subtract,
+        'divide':divide
+    }
+
+print(do_math(3, 4)['divide']())
+print(do_math(3, 4)['add_nums']())
+print(do_math(3, 4)['subtract']())
