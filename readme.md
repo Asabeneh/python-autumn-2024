@@ -17,7 +17,6 @@
     - [The `type()` Function](#the-type-function)
     - [The `input()` Function](#the-input-function)
     - [The `range()` Function](#the-range-function)
-    - [Built-in Functions](#built-in-functions)
     - [The `abs()`, `min()`, `max()`, and `sum()` Functions](#the-abs-min-max-and-sum-functions)
     - [The `enumerate()` Function](#the-enumerate-function)
     - [The `dir()` Function](#the-dir-function)
@@ -304,9 +303,7 @@ print(list(range(0, 101, 2)))
 
 ---
 
-### Built-in Functions
-
-Python provides various built-in functions for working with data types like **lists**, **sets**, **dictionaries**, and **tuples**.
+Python provides various built-in functions for working with different data types like **lists**, **sets**, **dictionaries**, and **tuples**.
 
 ```python
 print(set(['English', 'French', 'Finnish', 'Swedish', 'Finnish']))
