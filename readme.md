@@ -25,6 +25,8 @@
 
 [WEEK 2 >>](./WEEK-2/week-2.md)
 
+[WEEK 1](./readme.md) | [WEEK 2](./WEEK-2/week-2.md) | [WEEK 3](./WEEK-3/week-3.md) | [WEEK 4](./WEEK-4/week-4.md.md) | [WEEK 5](./WEEK-5/week-5.md) | [WEEK 6](./WEEK-6/week-6.md)
+
 ## Introduction to Python Programming
 
 Python is a versatile and beginner-friendly programming language known for its simplicity and readability. It's widely used in various fields, such as web development, data science, automation, and artificial intelligence. This guide will walk you through setting up Python, running an interactive shell, installing Visual Studio Code (VS Code), and writing your first Python program: `"Hello World!"`.

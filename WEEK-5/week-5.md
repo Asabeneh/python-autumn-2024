@@ -13,6 +13,9 @@
     - [Filtering Even Numbers](#filtering-even-numbers)
     - [Grouping with Variable Parameters](#grouping-with-variable-parameters)
     - [Function Example: Print Full Name](#function-example-print-full-name)
+    - [2. **Lambda Functions**](#2-lambda-functions)
+    - [3. **Higher-Order Functions**](#3-higher-order-functions)
+    - [4. **Function as a Parameter**](#4-function-as-a-parameter)
     - [Function summary](#function-summary)
   - [Modules](#modules)
     - [Importing Custom Modules](#importing-custom-modules)
@@ -308,6 +311,79 @@ Output:
 ```sh
 Asab Yeta
 ```
+
+### 2. **Lambda Functions**
+
+Lambda functions are anonymous, single-line functions. They are used for short operations without needing to define a full function.
+
+```python
+square = lambda x: x ** 2
+add_three_nums = lambda x, y, z: x + y + z
+linear_equation = lambda a, b, c: 2 * a + 3 * b + c
+```
+
+Examples:
+
+```python
+print(square(2))  # Output: 4
+print(add_three_nums(99, 1, 100))  # Output: 200
+```
+
+### 3. **Higher-Order Functions**
+
+A higher-order function either takes a function as an argument or returns another function.
+
+- `make_cube` is a higher-order function because it takes another function, `make_square`, as a parameter to calculate the cube of a number.
+
+```python
+def make_cube(n, make_square):
+    return n * make_square(n)
+```
+
+Example:
+
+```python
+print(make_cube(3, make_square))  # Output: 27
+```
+
+- `higher_order_function` accepts a function type and returns the corresponding function based on the input, such as `square`, `cube`, or `absolute`.
+
+```python
+def higher_order_function(type):
+    if type == 'square':
+        return make_square
+    elif type == 'cube':
+        return make_cube
+    elif type == 'absolute':
+        return absolute
+```
+
+Example:
+
+```python
+print(higher_order_function('square')(5))  # Output: 25
+print(higher_order_function('cube')(5, make_square))  # Output: 125
+```
+
+### 4. **Function as a Parameter**
+
+The `higher_order_function` function shows how a function can be passed as an argument to another function. It’s demonstrated using `sum_numbers` and a custom higher-order function that sums a list of numbers:
+
+```python
+def higher_order_function(f, lst):
+    return f(lst)
+```
+
+Example:
+
+```python
+result = higher_order_function(sum_numbers, [1, 2, 3, 4, 5])
+```
+
+This sums the list of numbers, returning `15`.
+
+This code provides an overview of how to work with keyword arguments, lambda expressions, and higher-order functions in Python, illustrating their versatility and power in functional programming.
+
 
 ### Function summary
 
