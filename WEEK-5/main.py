@@ -1,4 +1,5 @@
 # import custom_modules 
+import custom_modules
 from custom_modules import sum_all_nums, add_two_nums, multiply_two_nums, is_even, linear_equation, filter_country_with_land as filter_country, filter_evens
 from utils import utils
 """ 
@@ -53,5 +54,6 @@ print(generate_random_id(24))
 
 print(utils.alpha_numberic)
 print(utils.generate_hexa_color())
+print(dir(custom_modules))
 
 

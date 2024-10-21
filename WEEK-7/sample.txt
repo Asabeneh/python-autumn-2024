@@ -1,0 +1,3 @@
+We are learning Python
+We are learning File Handling
+This txt sample file
