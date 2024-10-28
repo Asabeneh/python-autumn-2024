@@ -39,11 +39,17 @@ from countries_data_big import countries_data_big
 lst = []
 for c in countries_data_big:
     name = c['name']
-    capital = c['capital']
+    capital = c.get('capital')
     population = c['population']
-    pass
+    country = {
+        'name':name,
+        'capital':capital,
+        'population':population
+    }
+    lst.append(country)
+  
  
-
+print(lst)
 import json
 # python dictionary
 person = {
@@ -56,3 +62,11 @@ with open('./data/json_example.json', 'w', encoding='utf-8') as f:
     json.dump(person, f, indent=4)
     
 # countries.json file in the data folder
+
+def create_json_file(filename, data):
+    import json
+    with open(f'./data/{filename}', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii = False, indent=4)
+    
+    
+create_json_file('countries.json', lst)
