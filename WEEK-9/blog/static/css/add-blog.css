@@ -1,0 +1,34 @@
+form {
+   
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin:10px auto;
+    padding:3px;
+}
+label {
+    margin-bottom: 8px;
+}
+.form-group input, .form-group select, .form-group textarea {
+    padding:12px;
+    border-radius: 6px;
+    outline: none;
+    border:2px solid rgb(150, 149, 147);
+    transition: all 0.3s ease-in-out;
+}
+.form-group input:hover, .form-group select:hover, .form-group textarea:hover {
+    border: 2px solid rgb(76, 77, 76);
+}
+
+textarea { resize:vertical; }
+
+.add-blog-btn {
+    width:150px;
+    height: 35px;
+    border-radius:8px;
+    outline:none;
+    border: 2px solid;
+    cursor: pointer;
+
+}

@@ -1,0 +1,27 @@
+main, header, footer {
+    width:65%;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding:20px;
+    margin:20px;
+}
+nav {
+    margin: auto;
+    padding: 30px;
+  }
+  nav ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    text-decoration:  none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
