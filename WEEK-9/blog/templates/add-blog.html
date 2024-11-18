@@ -2,10 +2,10 @@
 {% block content %}
 <h2>Add blog</h2>
 
-<form>
+<form action="{{ url_for('add_blog') }}" method="POST" enctype="multipart/form-data">
    <div class="form-group">
     <label for="title">Title</label>
-    <input type="text" id="title" name="title" placeholder="Title" />
+    <input type="text" id="title" name="title" placeholder="Title"  />
    </div>
    <div class="form-group">
     <label for="subtitle">Subtitle</label>
@@ -14,14 +14,25 @@
    <div class="form-group">
     <label for="category">Category</label>
     <select name="category" id="category">
-        <option value="">Web</option>
-        <option value="">Data</option>
-        <option value="">Cloud</option>
+        {% for category in blog_categories %}
+        <option value="{{category}}">{{category}}</option>
+        {% endfor %}
+      
     </select>
    </div>
    <div class="form-group">
     <label for="content">Content</label>
-    <textarea name="category" id="content" rows="10" placeholder="Write content here . . ."></textarea>
+    <textarea name="content" id="content" rows="10" placeholder="Write content here . . ."></textarea>
+    </div>
+</div>
+<div class="form-group">
+ <label for="tags">Tags</label>
+ <textarea name="tags" id="tags" rows="2" placeholder="Tags separated by comma"></textarea>
+ </div>
+ <div class="form-group">
+    <label for="cover_img">Cover Image</label>
+    <input type="file" id="cover_img" name="cover_img" />
+</div>
 
    <div class="form-group">
     <button class="add-blog-btn">Add Blog</button>

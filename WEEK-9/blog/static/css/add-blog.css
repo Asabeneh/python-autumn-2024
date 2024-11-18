@@ -32,3 +32,17 @@ textarea { resize:vertical; }
     cursor: pointer;
 
 }
+img {
+    max-width: 100%;
+}
+.blog-details h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+.blog-details p {
+    white-space: pre-wrap;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color:#666;
+}

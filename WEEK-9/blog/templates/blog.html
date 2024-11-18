@@ -1,23 +1,17 @@
 {% extends 'layout.html' %} {% block content %}
 <h2>Blogs</h2>
-<a href="{{url_for('add_blog')}}">Add Blog</a>
-<div class="blogs">
-  {% for blog in data %}
-  <div class="blog">
-    <h3>
-        <a href="{{url_for('blog', id = blog.id)}}">{{blog.title}}</a>
-    </h3>
+<a href="{{url_for('blogs')}}">Back blogs</a>
+  <div class="blog-details">
+    <h3>{{blog.title}}</h3>
     <small><time>{{blog.created_at.strftime('%d %B %Y %I:%M %p')}}</time></small>
     <br />
     <img src="../static/images/{{blog.cover_img}}" alt="">
    
-    <p>{{blog.content[:150]}} ...</p>
+    <p>{{blog.content }}</p>
     <div>
         <a href=" {{url_for('edit_blog', id = blog.id)}}">Edit</a>
         <a href="{{ url_for('delete_blog', id = blog.id)}}">Delete</a>
     </div>
   </div>
-  {% endfor %}
-</div>
 
 {% endblock %}
