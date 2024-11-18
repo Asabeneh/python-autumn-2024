@@ -1,0 +1,127 @@
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #f9f9f9; */
+    border: 1px solid rgba(24, 51, 204, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+  .blog-card:hover {
+    border: 1px solid rgba(24, 51, 204, 0.2);
+    cursor: pointer;
+  }
+ 
+ .blog-right a {
+    display: inline-block;
+    color: purple;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin:15px auto;
+    letter-spacing: 1px;
+    text-decoration: none;
+ }
+ .blog-list-image {
+    max-width: 100%;
+ }
+ .blog-right a:hover {
+    text-decoration: underline;
+ }
+ .blog-card-top {
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    gap:20px;
+    margin-bottom: 15px;
+ 
+  } 
+  .blog-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .blog-left {
+     flex:2;
+     
+  }
+  .blog-left img {
+     width: 100%;
+  }
+  .blog-right {
+     flex:4;
+ 
+  }
+  .blog-right p {
+     white-space: pre-wrap;
+  }
+  /* .blog {
+      width: 300px;
+      margin: 10px;
+      border: 2px solid blue;
+  } */
+  .blog-details-content {
+     margin: 15px auto;
+     background-color: rgb(247, 241, 248);
+     padding: 25px;
+     color:#222;
+  }
+  .blog-details-content p {
+     white-space: pre-wrap;
+ 
+ }
+ .blog-detials-cover-image img {
+     width:100%;
+     height:75%;
+     object-fit:cover;
+     background-position: center center;
+     background-size: 100% 100%;
+     margin:25px auto;
+ 
+ }
+  .blog img {
+      max-width:100%;
+  }
+ 
+  .blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .blog-tags a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f0eaf3;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color:black;
+    font-weight: 400;
+    border: 1px solid black;
+ 
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (max-width: 600px) {
+    .blog-card {
+       display: flex;
+       flex-direction: column;
+    }
+    .blog-card-top {
+       display: flex;
+       flex-direction: column;
+ 
+ 
+    }
+    .blog-right a {
+       font-size:20px;
+       margin:10px auto;
+       
+    }
+ 
+  }

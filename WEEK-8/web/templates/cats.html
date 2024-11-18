@@ -1,83 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home page</title>
-    <style>
-      nav {
-        color: purple;
-        border: 2px solid blue;
-        width: 55%;
-        margin: auto;
-        padding: 30px;
-      }
-      .cats {
-        width:65%;
-        margin: 0 auto;
-      }
-      .cat {
-        margin: 15px 0px;
-        padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-        border-radius: 12px;
-        transition: all 0.3s ease-in;
-      }
-      .cat:hover {
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
-      }
-      .cat h2 {
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-      .stat {
-        background-color: rgb(233, 222, 222);
-        padding:10px;
-        border-radius: 8px;
-        font-weight: 300;
-      }
+{% extends "layout.html" %} {% block content %}
 
-    </style>
-  </head>
-  <body>
-    <div
-    >
-    <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/contact">Contacts</a>
-          </li>
-          <li>
-            <a href="/cats">Cats</a>
-          </li>
-        </ul>
-      </nav>
+<div>
+  <h1>Cats Paradise({{number}})</h1>
+  <p>The number of cat breeds are {{number}}</p>
+  <small>Cats public API end point: <a href="{{url_for('cats_api')}}">Cats API</a></small>
+  <div class="cats">
+    {% for cat in data %}
+    <div class="cat">
       <div>
-        <h1>Cats Paradise</h1>
-        {{number}}
-       <div class = 'cats'>
-        {% for cat in data %}
-       <div class="cat"> 
-        <h2>{{cat['name']}}</h2>
-        <h3> {{cat.origin}}</h3>
-        <p>{{cat.description}}</p>
-        <div class="stat">
-            <span>Temperament: {{cat.temperament}}</span> <br />
-            <span>Weight: {{cat.weight.metric}}</span> <br />
-            <span>Life span: {{cat.life_span}}</span>
-            <p></p>
-        </div>
-       </div>
-        {% endfor %}
-       
-       </div>
+        <img src="{{cat.url}}" alt="{{cat.name}}" />
+      </div>
+      <h2>{{cat['name']}}</h2>
+      <h3>{{cat.origin}}</h3>
+      <p>{{cat.description}}</p>
+      <div class="stat">
+        <span>Temperament: {{cat.temperament}}</span> <br />
+        <span>Weight: {{cat.weight.metric}}</span> <br />
+        <span>Life span: {{cat.life_span}}</span>
+        <p></p>
       </div>
     </div>
-  </body>
-</html>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

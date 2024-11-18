@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="description"
+    content="A custom context menu using HTML, CSS, and TypeScript. This application is a demo to create a custom context menu for web applications."
+  />
+  <meta
+    name="keywords"
+    content="context menu, custom right-click menu, HTML, CSS, TypeScript, web development, UI design, frontend"
+  />
+  <meta name="author" content="Asabeneh Yetayeh" />
+  <title>
+    Context Menu using HTML, CSS, and TypeScript | Custom Right-Click Menus
+  </title>
+  <!-- Preconnect to external fonts to improve load performance -->
+  <link rel="preconnect" href="https://unicons.iconscout.com" />
+  <link
+    rel="preload"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    as="style"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add-blog.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css')}}">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li>
+                <a href="{{url_for('home')}}">Home</a>
+              </li>
+              <li>
+                <a href="{{url_for('about')}}">About</a>
+              </li>
+              <li>
+                <a href="{{url_for('contact')}}">Contacts</a>
+              </li>
+              <li>
+                <a href="{{url_for('blogs')}}">Blogs</a>
+              </li>
+              
+            </ul>
+          </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+      <p>Copyright &copy; 2024 | Asabeneh Yetayeh</p>
+    </footer>
+    
+</body>
+</html>

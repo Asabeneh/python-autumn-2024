@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Add blog</h2>
+<form action="{{url_for('add_blog')}}" method="POST" enctype="multipart/form-data">
+   <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" placeholder="Title" />
+   </div>
+   <div class="form-group">
+    <label for="subtitle">Subtitle</label>
+    <input type="text" id="subtitle" name="subtitle" placeholder="subtitle" />
+   </div>
+   <div class="form-group">
+    <label for="category">Category</label>
+    <select name="category" id="category">
+        {% for category in categories %}
+        <option value="{{category}}">{{category}}</option>
+        {% endfor %}
+
+    </select>
+ 
+    
+   </div>
+   <div class="form-group">
+    <label for="content">Content</label>
+    <textarea name="content" id="content" rows="10" placeholder="Write content here . . ."></textarea>
+    </div>
+    <div class="form-group">
+        <label for="tags">Tags</label>
+        <textarea name="tags" id="tags"  placeholder="Write tags sparated by comma"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="cover_img">Cover Image</label>
+        <input type="file" id="cover_img" name="cover_img" />
+    </div>
+
+   <div class="form-group">
+    <button class="add-blog-btn">Add Blog</button>
+   </div>
+   </div>
+    
+    
+</form>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Blogs</h2>
+<a href="{{url_for('add_blog')}}" class="getsita-btn">Add Blog</a>
+<div class="blogs">
+    {% for blog in blogs %}
+    <div class="blog-card">
+        <div class="blog-card-top">
+            <div class="blog-card-left">
+                {% if blog.cover_img %}
+                <img src="./static/images/{{blog.cover_img}}" alt="{{blog.title}}" loading="lazy"
+                class="blog-list-image" />
+                {% else %}
+                <img src="./static/images/default.webp" alt="{{blog.title}}"  loading="lazy"
+                class="blog-list-image" />
+                {% endif %}
+
+            </div>
+            <div class="blog-card-right">
+                <h2>
+                    <a href="{{url_for('blog', id = blog.id)}}">{{blog.title}}</a>
+                </h2>
+                
+                <h4>{{blog.subtitle}}</h4>
+                <p>{{blog.content[:150]}} . . .</p>
+                <time>{{blog.created_at.strftime('%d %b %Y')}}</time>
+                <small>{{blog.category}}</small>
+            </div>
+        </div>
+        <div class="blog-card-bottom">
+         <div>
+            <a href ={{ url_for('edit_blog', id = blog.id) }}><i class="uil uil-edit"></i></a>
+            <a href = {{url_for("delete_blog", id = blog.id) }}><i class="uil uil-trash-alt"></i></a>
+         </div>
+            <div>
+                
+                <small class="text-muted"
+                  >{{ blog.created_at.strftime('%d %B %Y') }}</small
+                >
+              </div>
+
+        </div>
+        
+        
+       
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

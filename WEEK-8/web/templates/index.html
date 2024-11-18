@@ -1,45 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home page</title>
-    <style>
-      nav {
-        color: purple;
-        border: 2px solid blue;
-        width: 55%;
-        margin: auto;
-        padding: 30px;
-      }
+{% extends "layout.html" %} {% block content %}
+<div>
+  <h1>Introduction</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsam, quae
+    dolorum pariatur nam, ducimus accusamus voluptate excepturi cumque suscipit
+    similique. Ipsam facere eveniet sapiente nostrum? Voluptatum accusantium
+    amet voluptatibus! Perferendis vero quidem nam provident nobis natus vel,
+    beatae aperiam veritatis dolor quis temporibus repellat aliquam. Dolorum
+    reiciendis, quisquam perspiciatis, magnam aliquam expedita id cum, qui
+    laboriosam non quidem quam. Vero dolor debitis, culpa repudiandae
+    reprehenderit aliquid recusandae pariatur tempore repellendus qui cum ex
+    consectetur distinctio nemo molestiae enim provident. Qui quo neque quos
+    inventore voluptates harum officiis aut. Corporis!
+  </p>
+</div>
 
-    </style>
-  </head>
-  <body>
-    <div
-    >
-    <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/contact">Contacts</a>
-          </li>
-          <li>
-            <a href="/cats">Cats</a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <h1>Introduction</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsam, quae dolorum pariatur nam, ducimus accusamus voluptate excepturi cumque suscipit similique. Ipsam facere eveniet sapiente nostrum? Voluptatum accusantium amet voluptatibus!
-        Perferendis vero quidem nam provident nobis natus vel, beatae aperiam veritatis dolor quis temporibus repellat aliquam. Dolorum reiciendis, quisquam perspiciatis, magnam aliquam expedita id cum, qui laboriosam non quidem quam.
-        Vero dolor debitis, culpa repudiandae reprehenderit aliquid recusandae pariatur tempore repellendus qui cum ex consectetur distinctio nemo molestiae enim provident. Qui quo neque quos inventore voluptates harum officiis aut. Corporis!</p>
-      </div>
-    </div>
-  </body>
-</html>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Blogs</h2>
+<a href="{{url_for('blogs')}}">Back to blogs</a>
+<div>
+    <h2>{{blog.title}}</h2>
+    {% if blog.cover_img %}
+    <img src="{{url_for('static', filename='images/' + blog.cover_img) }}" alt="{{blog.title}}" loading="lazy"
+    class="blog-list-image" style="max-width: 100%" />
+    {% else %}
+    <img src="{{url_for('static', filename='images/default.webp')}}" alt="{{blog.title}}"  loading="lazy"
+    class="blog-list-image" style="max-width: 100%"/>
+    {% endif %}
+    <h4>{{blog.subtitle}}</h4>
+    <p>{{blog.content}}</p>
+    <small>Posted on <time>{{blog.created_at.strftime('%d %b %Y')}}</time></small>
+    <small>{{blog.category}}</small>
+    <div class="blog-tags">
+        {% for tag in blog.tags %}
+      <a
+      href=""
+      class=""
+      >{{tag}}</a
+    >
+    
+      {% endfor %}
+    
+      </div>
+    <div>
+        <a href ={{ url_for('edit_blog', id = blog.id) }}><i class="uil uil-edit"></i></a>
+        <a href = {{url_for("delete_blog", id = blog.id) }}><i class="uil uil-trash-alt"></i></a>
+    </div>
+</div>
+
+
+{% endblock %}

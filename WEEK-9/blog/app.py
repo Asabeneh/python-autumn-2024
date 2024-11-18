@@ -1,17 +1,19 @@
 from flask import Flask, render_template
 from mysql.connector import connect
 
+
 app = Flask(__name__)
 
-# Connect to server
-""" db = connect(
-    host='localhost', 
-    user='root', 
-    password='root'
-    )
 
+db = connect(
+    host ='localhost',
+    user = 'root',
+    password = 'root',
+    database = 'blog_db'
+    
+)
 cursor = db.cursor()
-print(db) """
+print('Cursor', 'you are connected to a MySQL server')
 
 
 @app.route('/test')
